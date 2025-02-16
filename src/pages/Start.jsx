@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import logo from "../assets/profile.png";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
+import { useNavigate } from "react-router-dom";
 function Logo() {
   const [showText, setShowText] = useState(false);
-
+  const navigate = useNavigate();
   useEffect(() => {
 
     const timer = setTimeout(() => {
@@ -30,10 +31,10 @@ function Logo() {
           Hi, I am <b>Mohd Tabish Khan</b> <br /> A Bachelor of Technology (CSE)
         </div>
       </div>
-        {showText &&
-          <button className={` mt-20 fixed px-4 py-2 bg-transparent text-orange-400  hover:border-none hover:bg-orange-300 hover:duration-300 hover:ease-out hover:text-white   border-black border-1 animate-showButton rounded-xl translate-y-[100px] `}>
-          <b className="flex gap-2 items-center">Know More<ArrowTopRightIcon fontSize={6}/></b>
-          </button>}
+      {showText &&
+        <button className={` mt-20 fixed px-4 py-2 bg-transparent text-orange-400  hover:border-none hover:bg-orange-300 hover:duration-300 hover:ease-out hover:text-white   border-black border-1 animate-showButton rounded-xl translate-y-[100px] `} onClick={() => navigate('/home')}>
+          <b className="flex gap-2 items-center">Know More<ArrowTopRightIcon fontSize={6} /></b>
+        </button>}
 
       {/* <p className="flex-end">Site is under developement</p> */}
     </div>
