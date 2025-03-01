@@ -1,9 +1,8 @@
 @import "tailwindcss";
 @tailwind utilities;
 
-
 .font-poppins {
-	font-family: poppins, serif ;
+	font-family: poppins, serif;
 }
 
 /* Fixed Animations */
@@ -50,4 +49,16 @@
 }
 .animate-showButton {
 	animation: showButton 1s ease-in forwards;
+}
+ 
+.peerlist-logo {
+	background-image: url("./assets/peerlist-logo.png");
+	background-size: contain;
+}
+.gradient {
+  background: #833ab4;
+  background: linear-gradient(
+    to bottom,
+    #833ab4,#fd1d1d,#fcb045
+  );
 }
