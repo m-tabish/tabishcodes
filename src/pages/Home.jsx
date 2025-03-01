@@ -13,7 +13,7 @@ export default function Home() {
         <div className="w-screen m-auto h-full flex bg-[#f2f0ef]">
 
             {/* Left */}
-            <section className="border-gray-300 border-r-1 flex flex-col w-2/5 h-full gap-10">
+            <section className="border-gray-300 border-r-1 flex flex-col w-2/5  gap-10">
                 {/* Left Top */}
                 <section className="h-2/3   text-3xl text-center flex flex-col items-center p-4">
                     <img src={profile} className="rounded-full w-24 mt-6" alt="Profile" />

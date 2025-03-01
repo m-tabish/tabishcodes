@@ -1,9 +1,6 @@
 @import "tailwindcss";
 @tailwind utilities;
 
-.font-poppins {
-	font-family: poppins, serif;
-}
 
 /* Fixed Animations */
 @keyframes fadeOut {
