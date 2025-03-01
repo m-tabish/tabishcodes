@@ -30,6 +30,7 @@ export default function Home() {
 
                 {/* Left Bottom */}
                 <section className=" h-1/3 border-t-1 py-10 border-gray-300  cursor-pointer flex flex-col justify-center items-center">
+                    <div className="font-bold font-mono text-left text-2xl mb-10 "> Socials</div>
                     <div className="flex gap-2">
                         <a href="https://www.instagram.com/mtabish111" target="_blank" className={`gradient rounded-lg  w-12 h-12 flex items-center justify-center`} >
                             <InstagramLogoIcon className="w-6 h-6 " color="white" />
@@ -39,6 +40,7 @@ export default function Home() {
                             <LinkedInLogoIcon className="w-6 h-6 " color="white" />
                         </Social_logo>
                     </div>
+
                     <div className="flex gap-2 mt-3">
 
                         <Social_logo url={"https://www.github.com/m-tabish"} color={"black"}   >
