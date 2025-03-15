@@ -6,7 +6,7 @@ import home from "../assets/buildflow/home.png";
 import PeerlistLogo from "../assets/peerlist-logo.png";
 import profile from "../assets/profile.png";
 import Social_logo from "../components/Social_logo";
-
+import survey from "../assets/my-corner/trips-survey.png"
 export default function Home() {
     const buildflow_images = [home, examples, flowchart];
     const [index, setIndex] = useState(0);
@@ -73,8 +73,12 @@ export default function Home() {
             {/* Right */}
             <section className="border-l-1 border-gray-300 w-2/5 flex flex-col mt-6 pt-6">
                 <div className="h-full text-center flex flex-col">
-                    <h1 className="text-3xl font-bold">In other news</h1>
-                    <p className="mt-2 text-start pl-4 font-semibold">Currently Studying: <br /><span className="underline font-normal">Modern Operating Systems by Andrew S. Tanenbaum</span></p>
+                    <h1 className="text-3xl font-bold">Life corner</h1>
+                    <br />
+                    <p className="mt-2 text-start pl-4 font-semibold"><span className="border-1 rounded-sm bg-green-100 px-2 text-green-700">15/3/25</span> Offline Hackathon<br /><span className="font-normal">Would request to <a className="underline font-bold text-blue-700" href="https://docs.google.com/forms/d/e/1FAIpQLSeDBMLJ2Kj6-g7VVYo0uwRn-Yw7PdOPqj1wm5U_uqYYm4o89g/viewform?usp=header">fill this short survey</a> form for our project. </span>
+                    </p>
+                    <br />
+                    <p className="mt-2 text-start pl-4 font-semibold"><span className="border-1 rounded-sm bg-red-100 px-2 text-red-400">7/3/25</span> Currently Studying:   <br /><span className="underline font-normal">Modern Operating Systems by Andrew S. Tanenbaum</span></p>
                 </div>
             </section>
         </div>
