@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import logo from "../assets/profile.png";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import logo from "../assets/profile.png";
 function Logo() {
   const [showText, setShowText] = useState(false);
   const navigate = useNavigate();
@@ -28,7 +28,7 @@ function Logo() {
           className={`text-3xl  text-black transition-opacity duration-1500 ease-in-out  font-poppins text-center ${showText ? "opacity-100 translate-x-10" : "opacity-0 translate-x-10"
             }`}
         >
-          Hi, I am <b>Mohd Tabish Khan</b> <br /> <span className=" font-bold">2nd Year UG CSE</span> 
+          Hi, I am <b>Mohd Tabish Khan</b> <br /> <span className=" font-bold">2nd Year UG CSE</span>
         </div>
       </div>
       {showText &&
