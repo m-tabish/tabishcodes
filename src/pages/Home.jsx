@@ -13,7 +13,7 @@ export default function Home() {
     const [index, setIndex] = useState(0);
 
     return (
-        <body className="w-screen min-h-screen overflow-hidden overscroll-none flex bg-[#f2f0ef] flex-col md:flex-row  ">
+        <body className="  w-screen min-h-screen overflow-hidden overscroll-none flex bg-[#f2f0ef] flex-col md:flex-row  ">
             {/* Left */}
             <section className="border-gray-300 border-r-1 flex flex-col w-full md:w-2/6 gap-10">
                 {/* Left Top */}
@@ -54,8 +54,8 @@ export default function Home() {
             </section>
 
             {/* Middle */}
-            <section className="flex-grow flex flex-col p-6">
-                <h1 className="text-3xl text-center font-bold mb-10 mt-6">Projects</h1>
+            <section className="flex-grow flex flex-col p-6 ">
+                <h1 className="text-3xl text-center font-semibold mb-10 mt-6">Projects</h1>
                 <div className="flex flex-col gap-3">
                     <a href="https://buildflow-omega.vercel.app/" target="_blank" className="flex w-min gap-2 items-center text-2xl font-bold underline">BuildFlow <Link1Icon className="w-6 h-6" /></a>
                     <p className="text-lg">BuildFlow provides a step-by-step guide to create any project you ask it to by providing a project name, description, and tech stack.</p>
@@ -69,14 +69,11 @@ export default function Home() {
             {/* Right */}
             <section className="border-l-1 border-gray-300 w-full md:w-2/5 flex flex-col mt-6 pt-6">
                 <div className="h-4/5 text-center flex flex-col">
-                    <h1 className="text-3xl font-bold">Life corner</h1>
+                    <h1 className="text-3xl   font-semibold">Competitions</h1>
                     <br />
 
 
                     <LifeCornerObject date={"15 Mar, 25"} title={" Offline Hackathon "} body={" Would request to fill this short survey form for our project."} url={"https://docs.google.com/forms/d/e/1FAIpQLSeDBMLJ2Kj6-g7VVYo0uwRn-Yw7PdOPqj1wm5U_uqYYm4o89g/viewform?usp=header"} />
-
-
-                    <LifeCornerObject date={"7 Mar, 25"} title={" Currently Studying:  "} body={"Modern Operating Systems by Andrew S. Tanenbaum"} url={"#"} />
 
                     <LifeCornerObject date={"11-12 Dec, 24"} title={" Finalist @ Smart India Hackathon 2024  "} url={"https://www.linkedin.com/posts/neural-nex_smartindiahackathon-sih2024-pmabrmodiatsih-ugcPost-7274807816677113856-FNXQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC6yBLEBG5NH7o7dojF9RKVfNI21jRDlSZM"} />
 
@@ -115,15 +112,16 @@ export default function Home() {
 const LifeCornerObject = ({ classname, date, title, body, url, }) => {
     return (
         <>
-            <p className={` ${classname} rounded-sm   mx-2 mt-4 p-2  border-amber-400 border-t-2 text-start pt-4`}>
+            <p className={` ${classname} rounded-sm flex flex-col gap-1  mx-2    p-2 text-start pt-4`}>
                 {/* date */}
-                <span className="border-amber-400 border-1 bg-amber-100 rounded-sm px-2">{date} <br /></span>
+                <span className="border-amber-400 border-1 bg-amber-100 rounded-sm w-fit px-2">{date} <br /></span>
 
                 {/* title */}
                 <p className="font-semibold">{title}</p>
 
                 {/* Body */}
                 <p>{body}</p>
-                <a href={url} target="_blank" className="text-blue-500 underline">Click here</a></p >
+                <a href={url} target="_blank" className="text-blue-500 underline">Click here</a>
+            </p >
         </>)
 } 
