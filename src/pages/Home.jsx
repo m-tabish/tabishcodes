@@ -18,15 +18,34 @@ import Social_logo from "../components/Social_logo";
 
 
 const LifeCornerObjects = [
+
+    {
+        date: "25 Apr  , 24",
+        tags: ["PRIZE"],
+        title: "Viveka 4.0 Felicitation",
+        body: "Received Certificates and Medals for Viveka 4.0  ",
+        url: " https://www.linkedin.com/posts/m-tabishk_glad-to-be-felicitated-at-the-%F0%9D%90%95%F0%9D%90%88%F0%9D%90%95%F0%9D%90%84%F0%9D%90%8A%F0%9D%90%80-activity-7321590892576882688-tvY-?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC6yBLEBG5NH7o7dojF9RKVfNI21jRDlSZM",
+        classname: ""
+    },
     {
         date: "12-17 Apr, 25",
         title: "Submitted project in AMUHACKS 4.0",
+        tags: ["HACKATHON"],
         body: "",
-        url: "https://amuhacks-4.devfolio.co/overview",
+        url: "https://www.linkedin.com/posts/m-tabishk_had-an-incredible-experience-participating-activity-7320098535549411331-CBhW?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC6yBLEBG5NH7o7dojF9RKVfNI21jRDlSZM",
+        classname: "https://www.bluprnt.tech/"
+    },
+    {
+        date: "4-7 Apr, 25",
+        tags: ["HACKATHON"],
+        title: "Participated in AMHacks by AssetMerkle IGDTUW",
+        body: "",
+        url: "https://www.linkedin.com/posts/m-tabishk_hackathonjourney-innovationinaction-teamwork-activity-7320097059619950592-OFdc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC6yBLEBG5NH7o7dojF9RKVfNI21jRDlSZM",
         classname: "https://www.bluprnt.tech/"
     },
     {
         date: "15 Mar, 25",
+        tags: ["HACKATHON"],
         title: "Hacknovate 6.0 Hackathon",
         body: " Not selected. Would request to fill this short survey form for our project.",
         url: "https://docs.google.com/forms/d/e/1FAIpQLSeDBMLJ2Kj6-g7VVYo0uwRn-Yw7PdOPqj1wm5U_uqYYm4o89g/viewform?usp=header",
@@ -34,11 +53,13 @@ const LifeCornerObjects = [
     },
     {
         date: "11-12 Dec, 24",
+        tags: ["HACKATHON"],    
         title: "Finalist @ Smart India Hackathon 2024 ",
         body: " ",
         url: " https://www.linkedin.com/posts/neural-nex_smartindiahackathon-sih2024-pmabrmodiatsih-ugcPost-7274807816677113856-FNXQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC6yBLEBG5NH7o7dojF9RKVfNI21jRDlSZM",
         classname: ""
     },
+
 
 ]
 
@@ -97,18 +118,18 @@ export default function Home() {
                     <div className="mx-auto text-center flex flex-col items-center justify-center gap-2 h-[500px]">
                         <img src={bluprnt_images[index]} className="max-w-[800px] max-h-[500px] object-contain" />
                     </div>
-                    <button onClick={() => { setIndex(index => index < bluprnt_images.length - 1 ? index + 1 : 0); console.log(index) }} className="mx-auto rounded-sm w-fit  p-1 bg-[#fde047] border-amber-500 border-2 font-bold flex items-center gap-2 ">Next <ArrowRightIcon className="mt-4 " /></button>
+                    <button onClick={() => { setIndex(index => index < bluprnt_images.length - 1 ? index + 1 : 0); console.log(index) }} className="mx-auto rounded-sm w-fit  p-1  bg-[#fde047] border-amber-500 border-2 font-bold flex items-center justify-center gap-2 ">Next <ArrowRightIcon className="mt-1" /></button>
                 </div>
             </section>
 
             {/* Right */}
             <section className="border-l-1 border-gray-300 w-full md:w-2/5 flex flex-col mt-6 pt-6">
-                <div className="h-4/5 text-center flex flex-col">
+                <div className="  overflow-scroll overflow-x-hidden h-4/5 text-center flex flex-col">
                     <h1 className="text-3xl   font-semibold">Competitions</h1>
                     <br />
                     {LifeCornerObjects.map(((event) => (
                         <div key={event.title}>
-                            <LifeCornerObject date={event.date} title={event.title} body={event.body} url={event.url} classname={event.classname} />
+                            <LifeCornerObject date={event.date} title={event.title} tags={event.tags} body={event.body} url={event.url} classname={event.classname} />
                         </div>
                     )))}
                 </div>
@@ -138,19 +159,28 @@ export default function Home() {
 }
 
 
-const LifeCornerObject = ({ classname, date, title, body, url }) => {
+const LifeCornerObject = ({ classname, date, tags, title, body, url }) => {
     return (
-        <>
+        <div >
             <p className={` ${classname} rounded-sm flex flex-col gap-1  mx-2    p-2 text-start pt-4`}>
                 {/* date */}
-                <span className="border-amber-400 border-1 bg-amber-100 rounded-sm w-fit px-2">{date} <br /></span>
 
-                {/* title */}
+                <span className="flex justify-between  w-full">
+                    <span className="border-amber-400 border bg-amber-100 rounded-sm w-fit px-2 py-1 text-sm inline ">{date}</span>
+
+                    {tags && <span className="border-green-400 border bg-green-100 rounded-sm w-fit px-2 py-1 text-sm inline ">{tags?.map((tag) => (
+                        <span key={tag} className="">
+                            {tag}
+                        </span>
+                    ))}</span>}
+
+                </span>
+
                 <p className="font-semibold">{title}</p>
 
                 {/* Body */}
                 <p>{body}</p>
                 <a href={url} target="_blank" className="text-blue-500 underline">Check here</a>
             </p >
-        </>)
+        </div>)
 }  
