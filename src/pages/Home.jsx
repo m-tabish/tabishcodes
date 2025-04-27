@@ -1,15 +1,50 @@
 /* eslint-disable react/prop-types */
 import { ArrowRightIcon, GitHubLogoIcon, InstagramLogoIcon, Link1Icon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
-import examples from "../assets/buildflow/examples.png";
-import flowchart from "../assets/buildflow/flowchart.png";
-import home from "../assets/buildflow/home.png";
+
+// images
+import examples from "../assets/bluprnt/examples.png";
+import flowchart from "../assets/bluprnt/flowchart.png";
+import home from "../assets/bluprnt/home.png";
+import resources from "../assets/bluprnt/resources.png";
+import code from "../assets/bluprnt/code.png"
+
+// logo
 import PeerlistLogo from "../assets/peerlist-logo.png";
 import profile from "../assets/profile.png";
 import Social_logo from "../components/Social_logo";
 
+
+
+
+const LifeCornerObjects = [
+    {
+        date: "12-17 Apr, 25",
+        title: "Submitted project in AMUHACKS 4.0",
+        body: "",
+        url: "https://amuhacks-4.devfolio.co/overview",
+        classname: "https://www.bluprnt.tech/"
+    },
+    {
+        date: "15 Mar, 25",
+        title: "Hacknovate 6.0 Hackathon",
+        body: " Not selected. Would request to fill this short survey form for our project.",
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSeDBMLJ2Kj6-g7VVYo0uwRn-Yw7PdOPqj1wm5U_uqYYm4o89g/viewform?usp=header",
+        classname: ""
+    },
+    {
+        date: "11-12 Dec, 24",
+        title: "Finalist @ Smart India Hackathon 2024 ",
+        body: " ",
+        url: " https://www.linkedin.com/posts/neural-nex_smartindiahackathon-sih2024-pmabrmodiatsih-ugcPost-7274807816677113856-FNXQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC6yBLEBG5NH7o7dojF9RKVfNI21jRDlSZM",
+        classname: ""
+    },
+
+]
+
+
 export default function Home() {
-    const buildflow_images = [home, examples, flowchart];
+    const bluprnt_images = [home, examples, flowchart, code, resources];
     const [index, setIndex] = useState(0);
 
     return (
@@ -57,12 +92,12 @@ export default function Home() {
             <section className="flex-grow flex flex-col p-6 ">
                 <h1 className="text-3xl text-center font-semibold mb-10 mt-6">Projects</h1>
                 <div className="flex flex-col gap-3">
-                    <a href="https://buildflow-omega.vercel.app/" target="_blank" className="flex w-min gap-2 items-center text-2xl font-bold underline">BuildFlow <Link1Icon className="w-6 h-6" /></a>
-                    <p className="text-lg">BuildFlow provides a step-by-step guide to create any project you ask it to by providing a project name, description, and tech stack.</p>
-                    <div className="w-full h-96 mx-auto text-center flex flex-col items-center justify-center gap-2">
-                        <img src={buildflow_images[index]} className="max-w-full h-full" />
+                    <a href="https://buildflow-omega.vercel.app/" target="_blank" className="flex w-auto gap-2 items-center text-2xl font-bold underline">Bluprnt (earlier Buildflow)<Link1Icon className="w-6 h-6" /></a>
+                    <p className="text-lg">Bluprnt provides a step-by-step guide to create any project you ask it to by providing a project name, description, and tech stack.</p>
+                    <div className="mx-auto text-center flex flex-col items-center justify-center gap-2 h-[500px]">
+                        <img src={bluprnt_images[index]} className="max-w-[800px] max-h-[500px] object-contain" />
                     </div>
-                    <button onClick={() => { setIndex(index => index < 2 ? index + 1 : 0); console.log(index) }} className="rounded-sm w-fit mx-auto p-1 bg-[#fde047] border-amber-500 border-2 font-bold flex items-center gap-2 ">Next <ArrowRightIcon className="mt-1" /></button>
+                    <button onClick={() => { setIndex(index => index < bluprnt_images.length - 1 ? index + 1 : 0); console.log(index) }} className="mx-auto rounded-sm w-fit  p-1 bg-[#fde047] border-amber-500 border-2 font-bold flex items-center gap-2 ">Next <ArrowRightIcon className="mt-4 " /></button>
                 </div>
             </section>
 
@@ -71,17 +106,11 @@ export default function Home() {
                 <div className="h-4/5 text-center flex flex-col">
                     <h1 className="text-3xl   font-semibold">Competitions</h1>
                     <br />
-
-
-                    <LifeCornerObject date={"15 Mar, 25"} title={" Offline Hackathon "} body={" Would request to fill this short survey form for our project."} url={"https://docs.google.com/forms/d/e/1FAIpQLSeDBMLJ2Kj6-g7VVYo0uwRn-Yw7PdOPqj1wm5U_uqYYm4o89g/viewform?usp=header"} />
-
-                    <LifeCornerObject date={"11-12 Dec, 24"} title={" Finalist @ Smart India Hackathon 2024  "} url={"https://www.linkedin.com/posts/neural-nex_smartindiahackathon-sih2024-pmabrmodiatsih-ugcPost-7274807816677113856-FNXQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC6yBLEBG5NH7o7dojF9RKVfNI21jRDlSZM"} />
-
-                    <div className="px-2 text-sm text-left self-start mx-6 mt-4">
-
-
-                    </div>
-
+                    {LifeCornerObjects.map(((event) => (
+                        <div key={event.title}>
+                            <LifeCornerObject date={event.date} title={event.title} body={event.body} url={event.url} classname={event.classname} />
+                        </div>
+                    )))}
                 </div>
                 <div className="w-full ">
                     <p className="text-center my-4 text-xl font-semibold">Hackathon Counter</p>
@@ -109,7 +138,7 @@ export default function Home() {
 }
 
 
-const LifeCornerObject = ({ classname, date, title, body, url, }) => {
+const LifeCornerObject = ({ classname, date, title, body, url }) => {
     return (
         <>
             <p className={` ${classname} rounded-sm flex flex-col gap-1  mx-2    p-2 text-start pt-4`}>
@@ -121,7 +150,7 @@ const LifeCornerObject = ({ classname, date, title, body, url, }) => {
 
                 {/* Body */}
                 <p>{body}</p>
-                <a href={url} target="_blank" className="text-blue-500 underline">Click here</a>
+                <a href={url} target="_blank" className="text-blue-500 underline">Check here</a>
             </p >
         </>)
-} 
+}  

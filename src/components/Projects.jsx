@@ -1,4 +1,4 @@
- 
+
 function Projects() {
     return (
         <div>
@@ -7,7 +7,7 @@ function Projects() {
                 <div className='font-mono text-2xl  border-b-2 font-extralight text-[#967259]'>Projects
                 </div>
                 <div className=' mt-5'>
-                    <a className='border-b-1 text-xl' href='https://buildflow-omega.vercel.app/' target='_blank'>Build Flow</a>
+                    <a className='border-b-1 text-xl' href='https://www.bluprnt.tech/' target='_blank'>Bluprnt (earlier Buildflow)</a>
                     <p className='mt-2'>- Placed 4th out of 100 GenAI projects in BuildFast with AI Hackathon. </p>
                     <p>- Developed a full-stack web application using ReactJS, MongoDB, and ExpressJS.</p>
                     <p>– Implemented interactive flowcharts using React Flow, enhancing guidance with code snippets and resources.</p>
