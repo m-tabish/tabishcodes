@@ -3,11 +3,11 @@ import { ArrowRightIcon, GitHubLogoIcon, InstagramLogoIcon, Link1Icon, LinkedInL
 import { useState } from "react";
 
 // images
+import code from "../assets/bluprnt/code.png";
 import examples from "../assets/bluprnt/examples.png";
 import flowchart from "../assets/bluprnt/flowchart.png";
 import home from "../assets/bluprnt/home.png";
 import resources from "../assets/bluprnt/resources.png";
-import code from "../assets/bluprnt/code.png"
 
 // logo
 import PeerlistLogo from "../assets/peerlist-logo.png";
@@ -53,7 +53,7 @@ const LifeCornerObjects = [
     },
     {
         date: "11-12 Dec, 24",
-        tags: ["HACKATHON"],    
+        tags: ["HACKATHON"],
         title: "Finalist @ Smart India Hackathon 2024 ",
         body: " ",
         url: " https://www.linkedin.com/posts/neural-nex_smartindiahackathon-sih2024-pmabrmodiatsih-ugcPost-7274807816677113856-FNXQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC6yBLEBG5NH7o7dojF9RKVfNI21jRDlSZM",
@@ -73,16 +73,17 @@ export default function Home() {
             {/* Left */}
             <section className="border-gray-300 border-r-1 flex flex-col w-full md:w-2/6 gap-10">
                 {/* Left Top */}
-                <section className="h-1/2 text-3xl text-center flex flex-col items-center p-4">
+                <section className="h-1/2 text-3xl text-center flex flex-col items-center justify-center p-4">
                     <img src={profile} className="rounded-full w-24 mt-6" alt="Profile" />
 
                     <div className="text-xl font-semibold mt-2">Mohd Tabish Khan</div>
 
-                    <div className="mt-3 text-sm  w-4/5">CSE UG &apos;27  | Web Dev </div>
+                    <div className="mt-3 text-sm  w-4/5">CSE UG &apos;27   </div>
                     <br />
-                    <p className="font-semibold h-fit text-clip overflow-clip text-sm px-2">A Computer Science Engineering student passionate about Web Development </p>
+                    <p className="font-semibold h-fit text-clip overflow-clip text-sm px-2">  </p>
 
                 </section>
+
 
                 {/* Left Bottom */}
                 <section className="h-1/2 border-t-1 py-10 border-gray-300 cursor-pointer flex flex-col justify-center items-center">
