@@ -114,7 +114,7 @@ export default function Home() {
             <section className="flex-grow flex flex-col p-6 ">
                 <h1 className="text-3xl text-center font-semibold mb-10 mt-6">Projects</h1>
                 <div className="flex flex-col gap-3">
-                    <a href="https://buildflow-omega.vercel.app/" target="_blank" className="flex w-auto gap-2 items-center text-2xl font-bold underline">Bluprnt (earlier Buildflow)<Link1Icon className="w-6 h-6" /></a>
+                    <a href="https://buildflow-omega.vercel.app/" target="_blank" className="flex w-auto gap-2 items-center text-2xl font-bold underline">Bluprnt <Link1Icon className="w-6 h-6" /></a>
                     <p className="text-lg">Bluprnt provides a step-by-step guide to create any project you ask it to by providing a project name, description, and tech stack.</p>
                     <div className="mx-auto text-center flex flex-col items-center justify-center gap-2 h-[500px]">
                         <img src={bluprnt_images[index]} className="max-w-[800px] max-h-[500px] object-contain" />
