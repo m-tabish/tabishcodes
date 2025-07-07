@@ -28,7 +28,7 @@ function Logo() {
           className={`text-3xl  text-black transition-opacity duration-1500 ease-in-out  font-poppins text-center ${showText ? "opacity-100 translate-x-10" : "opacity-0 translate-x-10"
             }`}
         >
-          Hi, I am <b>Mohd Tabish Khan</b> <br /> <span className=" font-bold">2nd Year UG CSE </span>
+          Hi, I am <b>Mohd Tabish Khan</b> <br /> <span className=" font-bold">3rd Year UG CSE </span>
         </div>
       </div>
       {showText &&

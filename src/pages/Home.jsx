@@ -14,64 +14,20 @@ import PeerlistLogo from "../assets/peerlist-logo.png";
 import profile from "../assets/profile.png";
 import Social_logo from "../components/Social_logo";
 
+// import { Tweet } from "react-tweet";
+import { LifeCornerObjects } from "./lifeEvents.jsx";
 
 
-
-const LifeCornerObjects = [
-
-    {
-        date: "25 Apr  , 24",
-        tags: ["PRIZE"],
-        title: "Viveka 4.0 Felicitation",
-        body: "Received Certificates and Medals for Viveka 4.0  ",
-        url: " https://www.linkedin.com/posts/m-tabishk_glad-to-be-felicitated-at-the-%F0%9D%90%95%F0%9D%90%88%F0%9D%90%95%F0%9D%90%84%F0%9D%90%8A%F0%9D%90%80-activity-7321590892576882688-tvY-?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC6yBLEBG5NH7o7dojF9RKVfNI21jRDlSZM",
-        classname: ""
-    },
-    {
-        date: "12-17 Apr, 25",
-        title: "Submitted project in AMUHACKS 4.0",
-        tags: ["HACKATHON"],
-        body: "",
-        url: "https://www.linkedin.com/posts/m-tabishk_had-an-incredible-experience-participating-activity-7320098535549411331-CBhW?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC6yBLEBG5NH7o7dojF9RKVfNI21jRDlSZM",
-        classname: "https://www.bluprnt.tech/"
-    },
-    {
-        date: "4-7 Apr, 25",
-        tags: ["HACKATHON"],
-        title: "Participated in AMHacks by AssetMerkle IGDTUW",
-        body: "",
-        url: "https://www.linkedin.com/posts/m-tabishk_hackathonjourney-innovationinaction-teamwork-activity-7320097059619950592-OFdc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC6yBLEBG5NH7o7dojF9RKVfNI21jRDlSZM",
-        classname: "https://www.bluprnt.tech/"
-    },
-    {
-        date: "15 Mar, 25",
-        tags: ["HACKATHON"],
-        title: "Hacknovate 6.0 Hackathon",
-        body: " Not selected. Would request to fill this short survey form for our project.",
-        url: "https://docs.google.com/forms/d/e/1FAIpQLSeDBMLJ2Kj6-g7VVYo0uwRn-Yw7PdOPqj1wm5U_uqYYm4o89g/viewform?usp=header",
-        classname: ""
-    },
-    {
-        date: "11-12 Dec, 24",
-        tags: ["HACKATHON"],
-        title: "Finalist @ Smart India Hackathon 2024 ",
-        body: " ",
-        url: " https://www.linkedin.com/posts/neural-nex_smartindiahackathon-sih2024-pmabrmodiatsih-ugcPost-7274807816677113856-FNXQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC6yBLEBG5NH7o7dojF9RKVfNI21jRDlSZM",
-        classname: ""
-    },
-
-
-]
 
 
 export default function Home() {
     const bluprnt_images = [home, examples, flowchart, code, resources];
     const [index, setIndex] = useState(0);
-
+    const lifeEvents = LifeCornerObjects
     return (
-        <body className="  w-screen min-h-screen overflow-hidden overscroll-none flex bg-[#f2f0ef] flex-col md:flex-row  ">
+        <div className="  w-screen min-h-screen overflow-hidden overscroll-none flex bg-[#f2f0ef] flex-col md:flex-row  ">
             {/* Left */}
-            <section className="border-gray-300 border-r-1 flex flex-col w-full md:w-2/6 gap-10">
+            <section className="border-gray-300 border-r-1 flex flex-col w-full h-full my-12 md:w-2/6 gap-10">
                 {/* Left Top */}
                 <section className="h-1/2 text-3xl text-center flex flex-col items-center justify-center p-4">
                     <img src={profile} className="rounded-full w-24 mt-6" alt="Profile" />
@@ -111,26 +67,39 @@ export default function Home() {
             </section>
 
             {/* Middle */}
-            <section className="flex-grow flex flex-col p-6 ">
+            <section className="flex-grow flex flex-col p-6">
                 <h1 className="text-3xl text-center font-semibold mb-10 mt-6">Projects</h1>
-                <div className="flex flex-col gap-3">
-                    <a href="https://buildflow-omega.vercel.app/" target="_blank" className="flex w-auto gap-2 items-center text-2xl font-bold underline">Bluprnt <Link1Icon className="w-6 h-6" /></a>
+
+                <div className="flex flex-col w-full gap-3">
+                    <a href="https://www.bluprnt.tech/" target="_blank" className="flex w-auto gap-2 items-center text-2xl font-bold underline">Bluprnt <Link1Icon className="w-6 h-6" /></a>
                     <p className="text-lg">Bluprnt provides a step-by-step guide to create any project you ask it to by providing a project name, description, and tech stack.</p>
-                    <div className="mx-auto text-center flex flex-col items-center justify-center gap-2 h-[500px]">
-                        <img src={bluprnt_images[index]} className="max-w-[800px] max-h-[500px] object-contain" />
+                    <div className="w-full text-center flex flex-col items-center justify-center gap-2 h-[500px]">
+                        {/* <img src={bluprnt_images[index]} className="max-w-[800px] max-h-[500px] object-contain" /> */}
+
+                        <iframe src="https://www.bluprnt.tech" className="h-full w-sm lg:w-2xl max-w-3xl"></iframe>
                     </div>
-                    <button onClick={() => { setIndex(index => index < bluprnt_images.length - 1 ? index + 1 : 0); console.log(index) }} className="mx-auto rounded-sm w-fit  p-1  bg-[#fde047] border-amber-500 border-2 font-bold flex items-center justify-center gap-2 ">Next <ArrowRightIcon className="mt-1" /></button>
+                
+                </div>
+                <div className="flex flex-col gap-3">
+
+
+
+
+                    {/* <div className='tweet-customizer-wrapper max-h-1/5 w-auto'>
+                        <Tweet id="1840646848270492084"></Tweet>
+                    </div> */}
                 </div>
             </section>
 
             {/* Right */}
             <section className="border-l-1 border-gray-300 w-full md:w-2/5 flex flex-col mt-6 pt-6">
                 <div className="  overflow-scroll overflow-x-hidden h-4/5 text-center flex flex-col">
-                    <h1 className="text-3xl   font-semibold">Competitions</h1>
+                    <h1 className="text-3xl   font-semibold">Life Logs</h1>
                     <br />
-                    {LifeCornerObjects.map(((event) => (
+                    {lifeEvents.map(((event) => (
                         <div key={event.title}>
-                            <LifeCornerObject date={event.date} title={event.title} tags={event.tags} body={event.body} url={event.url} classname={event.classname} />
+                            <LifeCornerObject date={event.date} title={event.title} tags={event.tags} body={event.body} url={event.url} classname={event.classname}  >   {event.children}
+                            </LifeCornerObject>
                         </div>
                     )))}
                 </div>
@@ -155,15 +124,16 @@ export default function Home() {
                 </div>
 
             </section>
-        </body>
+
+        </div>
     );
 }
 
 
-const LifeCornerObject = ({ classname, date, tags, title, body, url }) => {
+const LifeCornerObject = ({ classname, date, tags, title, body, url, children }) => {
     return (
         <div >
-            <p className={` ${classname} rounded-sm flex flex-col gap-1  mx-2    p-2 text-start pt-4`}>
+            <span className={` ${classname} rounded-sm flex flex-col gap-1  mx-2    p-2 text-start pt-4`}>
                 {/* date */}
 
                 <span className="flex justify-between  w-full">
@@ -181,7 +151,8 @@ const LifeCornerObject = ({ classname, date, tags, title, body, url }) => {
 
                 {/* Body */}
                 <p>{body}</p>
+                {children}
                 <a href={url} target="_blank" className="text-blue-500 underline">Check here</a>
-            </p >
+            </ span>
         </div>)
 }  
