@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { ArrowRightIcon, GitHubLogoIcon, InstagramLogoIcon, Link1Icon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
+import { GitHubLogoIcon, InstagramLogoIcon, Link1Icon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 
 // images
@@ -21,8 +21,7 @@ import { LifeCornerObjects } from "./lifeEvents.jsx";
 
 
 export default function Home() {
-    const bluprnt_images = [home, examples, flowchart, code, resources];
-    const [index, setIndex] = useState(0);
+  
     const lifeEvents = LifeCornerObjects
     return (
         <div className="  w-screen min-h-screen overflow-hidden overscroll-none flex bg-[#f2f0ef] flex-col md:flex-row  ">
@@ -78,7 +77,7 @@ export default function Home() {
 
                         <iframe src="https://www.bluprnt.tech" className="h-full w-sm lg:w-2xl max-w-3xl"></iframe>
                     </div>
-                
+
                 </div>
                 <div className="flex flex-col gap-3">
 

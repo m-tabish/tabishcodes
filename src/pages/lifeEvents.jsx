@@ -5,28 +5,28 @@ export const LifeCornerObjects = [
         tags: ["PROJECT"],
         title: "BLUPRNT WAITLIST LAUNCH",
         body: "Rolled out Bluprnt Waitlist, Join at: ",
-        url: " https://www.linkedin.com/posts/m-tabishk_glad-to-be-felicitated-at-the-%F0%9D%90%95%F0%9D%90%88%F0%9D%90%95%F0%9D%90%84%F0%9D%90%8A%F0%9D%90%80-activity-7321590892576882688-tvY-?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC6yBLEBG5NH7o7dojF9RKVfNI21jRDlSZM",
+        url: "https://www.bluprnt.tech/",
         classname: "",
         // children: 
-            // <div className="twitter-tweet backdrop-blur-sm bg-[#16202a] border font-mono text-white rounded-lg p-4  max-w-xl w-full">
-            //     <p>
-            //         We’ve just opened our waitlist for{' '}
-            //         <a href="https://t.co/yep5TnXY4t" className="text-blue-400 underline">https://t.co/yep5TnXY4t</a>
-            //         <br />— a space where you can design clear roadmaps and visualize your project flows without the clutter.
-            //         <br /><br />
-            //         If you like seeing your ideas take shape step by step, this might just click with you.
-            //         <br />
-            //         <a href="https://twitter.com/hashtag/BuildInPublic?src=hash&amp;ref_src=twsrc%5Etfw" className="text-blue-400 underline">#BuildInPublic</a>{' '}
-            //         <a href="https://twitter.com/hashtag/Waitlist?src=hash&amp;ref_src=twsrc%5Etfw" className="text-blue-400 underline">#Waitlist</a>{' '}
-            //         <a href="https://t.co/iueXSv1cWk" className="text-blue-400 underline">https://t.co/iueXSv1cWk</a>{' '}
-            //         {/* <a href="https://t.co/IWEMFp1ETb" className="text-blue-400 underline">pic.twitter.com/IWEMFp1ETb</a> */}
-            //         <img src="https://t.co/IWEMFp1ETb/pic.twitter.com/IWEMFp1ETb" alt="pic" className="w-full h-[200px] "/>
-            //     </p>
-            //     <div className="mt-2 text-sm text-gray-400">
-            //         — Tabish (<a href="https://twitter.com/damnthesebugs" className="text-blue-400 underline">@damnthesebugs</a>){' '}
-            //         <a href="https://x.com/damnthesebugs/status/1940255444821557382/photo/1" className="text-blue-400 underline">July 2, 2025</a>
-            //     </div>
-            // </div>
+        // <div className="twitter-tweet backdrop-blur-sm bg-[#16202a] border font-mono text-white rounded-lg p-4  max-w-xl w-full">
+        //     <p>
+        //         We’ve just opened our waitlist for{' '}
+        //         <a href="https://t.co/yep5TnXY4t" className="text-blue-400 underline">https://t.co/yep5TnXY4t</a>
+        //         <br />— a space where you can design clear roadmaps and visualize your project flows without the clutter.
+        //         <br /><br />
+        //         If you like seeing your ideas take shape step by step, this might just click with you.
+        //         <br />
+        //         <a href="https://twitter.com/hashtag/BuildInPublic?src=hash&amp;ref_src=twsrc%5Etfw" className="text-blue-400 underline">#BuildInPublic</a>{' '}
+        //         <a href="https://twitter.com/hashtag/Waitlist?src=hash&amp;ref_src=twsrc%5Etfw" className="text-blue-400 underline">#Waitlist</a>{' '}
+        //         <a href="https://t.co/iueXSv1cWk" className="text-blue-400 underline">https://t.co/iueXSv1cWk</a>{' '}
+        //         {/* <a href="https://t.co/IWEMFp1ETb" className="text-blue-400 underline">pic.twitter.com/IWEMFp1ETb</a> */}
+        //         <img src="https://t.co/IWEMFp1ETb/pic.twitter.com/IWEMFp1ETb" alt="pic" className="w-full h-[200px] "/>
+        //     </p>
+        //     <div className="mt-2 text-sm text-gray-400">
+        //         — Tabish (<a href="https://twitter.com/damnthesebugs" className="text-blue-400 underline">@damnthesebugs</a>){' '}
+        //         <a href="https://x.com/damnthesebugs/status/1940255444821557382/photo/1" className="text-blue-400 underline">July 2, 2025</a>
+        //     </div>
+        // </div>
     },
     {
         date: "25 Apr  , 24",
